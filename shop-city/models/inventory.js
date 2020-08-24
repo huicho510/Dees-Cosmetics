@@ -15,39 +15,11 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false,
         },
-      address: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 50]
-        }
-      },
       seller: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [1, 50]
-        }
-      },
-      city: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 50]
-        }
-      },
-      state: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [2]
-        }
-      },
-      zip: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [5]
         }
       },
       details: {
