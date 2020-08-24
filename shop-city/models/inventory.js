@@ -22,18 +22,18 @@ module.exports = function(sequelize, DataTypes) {
             len: [1, 50]
         }
       },
+      condition: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [3, 4]
+        }
+      },
       details: {
         type: DataTypes.STRING,
         allowNull: true,
         validate: {
           len: [1, 2000]
-        }
-      },
-      timeFrame: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 20]
         }
       },
       postedDate: {
