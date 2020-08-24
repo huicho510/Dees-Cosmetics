@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       details: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           len: [1, 2000]
         }
