@@ -8,20 +8,13 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       price: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false,
         },
       stock: {
         type: DataTypes.INTEGER,
         allowNull: false,
         },
-      address: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 50]
-        }
-      },
       seller: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -29,39 +22,18 @@ module.exports = function(sequelize, DataTypes) {
             len: [1, 50]
         }
       },
-      city: {
+      product_condition: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [1, 50]
-        }
-      },
-      state: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [2]
-        }
-      },
-      zip: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [5]
+          len: [3, 4]
         }
       },
       details: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           len: [1, 2000]
-        }
-      },
-      timeFrame: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 20]
         }
       },
       postedDate: {
