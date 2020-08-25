@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
             len: [1, 50]
         }
       },
-      condition: {
+      product_condition: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
