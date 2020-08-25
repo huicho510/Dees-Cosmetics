@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       price: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.DECIMAL,
         allowNull: false,
         },
       stock: {
