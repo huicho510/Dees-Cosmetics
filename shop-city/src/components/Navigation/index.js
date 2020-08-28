@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl"
+import Drawer from "./Drawer"
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 
@@ -14,6 +15,7 @@ function Navigation() {
   return (
     <div>
     <Navbar bg="dark" variant="dark">
+      <Drawer />
     <Navbar.Brand href="#home">Shop City</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="#home">Home</Nav.Link>
