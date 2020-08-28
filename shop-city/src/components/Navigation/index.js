@@ -16,9 +16,9 @@ function Navigation() {
     <div>
     <Navbar bg="dark" variant="dark">
       <Drawer />
-    <Navbar.Brand href="#home">Shop City</Navbar.Brand>
+    <Navbar.Brand href="./home">Shop City</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="./home">Home</Nav.Link>
       <Nav.Link href="#features">Shop</Nav.Link>
       <Nav.Link href="#pricing">Pricing</Nav.Link>
     
