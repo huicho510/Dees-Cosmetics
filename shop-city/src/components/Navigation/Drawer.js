@@ -7,6 +7,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    left: false,
+    left: false
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -43,11 +44,11 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Electronics', 'Books', 'Sports', 'Beauty'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+          <ListItem button key={'electronics'}>
+            <a href='/electronics' >
+            <ListItemText primary={'electronics'} />
+            </a>
           </ListItem>
-        ))}
       </List>
       <Divider />
       <List>
@@ -62,19 +63,19 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      {['left'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+        <React.Fragment >
+  <Button onClick={toggleDrawer('left', true)}>
+    <MenuIcon className= 'menu' />
+  </Button>
           <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
+            anchor={'left'}
+            open={state.left}
+            onClose={toggleDrawer('left', false)}
+            onOpen={toggleDrawer('left', true)}
           >
-            {list(anchor)}
+            {list('left')}
           </SwipeableDrawer>
         </React.Fragment>
-      ))}
     </div>
   );
 }

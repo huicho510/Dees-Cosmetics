@@ -1,7 +1,6 @@
 import React from "react";
 import Product from "../components/Product/index";
 import Straw from "../images/straw.jpg";
-import Amazon from "../images/amazon.jpg";
 import "./style.css";
 
 const Home = () => {
