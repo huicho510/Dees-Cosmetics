@@ -3,12 +3,12 @@ import Product from "../components/Product/index";
 import Straw from "../images/straw.jpg";
 import "./style.css";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="home">
       <img
         className="home__image"
-        src="https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/YjJkZWQ0NTgt/YjJkZWQ0NTgt-MWE1MmNlZDAt-w1500._CB406132032_.jpg"
+        src="https://cdn.shopify.com/s/files/1/2634/9716/files/Banner-MINIFAN_1944x.gif?v=1595538366"
         alt="home"
       />
       <div className="home__row">
