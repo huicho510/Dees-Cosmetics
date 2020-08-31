@@ -21,7 +21,7 @@ function Navigation() {
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
             
-          <Nav.Link a href="//instagram.com/_deecosmetics" target="_blank"><InstagramIcon color="light"/></Nav.Link>
+          <Nav.Link href="//instagram.com/_deecosmetics" target="_blank"><InstagramIcon /></Nav.Link>
             
           <Nav.Link href="./home">Home</Nav.Link>
           <Nav.Link href="#features">Shop</Nav.Link>

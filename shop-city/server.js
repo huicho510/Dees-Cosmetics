@@ -1,4 +1,3 @@
-// Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -6,12 +5,11 @@ const passport = require("./config/passport");
 const mongoose = require("mongoose");
 const path = require("path");
 const apiRoutes = require("./routes/apiRoutes");
-
-// Setting up port and requiring models for syncing
+const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Creating express app and configuring middleware needed for authentication
-const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -33,9 +31,9 @@ mongoose.connect(
 
 app.use("/api", apiRoutes);
 
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 
 app.listen(PORT, function() {
