@@ -9,12 +9,15 @@ mongoose.connect(
 );
 
 // Create seeds below
+const productSeed = [
+{
+  image: "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
+  title: "Bonita",
+  price: "12.99",
+  date: new Date(Date.now())
 
-
-
-
-
-
+}
+];
 
 
 

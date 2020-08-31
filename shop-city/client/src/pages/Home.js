@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Product from "../components/Product/index";
 import Straw from "../images/straw.jpg";
 import "./style.css";
+import API from "../utils/API";
+import { Link } from "react-router-dom";
 
 const Home = (props) => {
+
+    // Setting our component's initial state
+    const [products, setProducts] = useState([])
+    const [formObject, setFormObject] = useState({})
+  
+    // Load all books and store them with setBooks
+    useEffect(() => {
+      loadProduct()
+    }, [])
+  
+    // Loads all books and sets them to books
+    function loadProduct() {
+      API.getProduct()
+        .then(res => 
+          setProducts(res.data)
+        )
+        // then(res => loadProduct())
+        .catch(err => console.log(err));
+    };
+
   return (
     <div className="home">
       <img
