@@ -3,6 +3,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 import Navbar from "react-bootstrap/Navbar";
+import Button from '@material-ui/core/Button';
 import "./index.css"
 
 export class FormUserDetails extends Component {
@@ -44,12 +45,13 @@ export class FormUserDetails extends Component {
               defaultValue={values.email}
             />
             <br />
-            <RaisedButton
+            <Button
+              className="button"
               label="Continue"
-              primary={true}
+             
               style={styles.button}
-              onClick={this.continue}
-            />
+              onClick={this.continue}>Continue
+              </Button>
           </React.Fragment>
         </MuiThemeProvider>
       </div>
@@ -59,7 +61,13 @@ export class FormUserDetails extends Component {
 
 const styles = {
   button: {
-    margin: 15,
+    background: 'linear-gradient(45deg, #fc5296 20%, #f67062 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    height: 45,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(250, 105, 135, .3)',
   },
 };
 

@@ -4,7 +4,7 @@ import Straw from "../images/straw.jpg";
 import "./style.css";
 import API from "../utils/API";
 
-const Home = (props) => {
+const Home = () => {
   // Setting our component's initial state
   const [products, setProducts] = useState([]);
 
@@ -17,7 +17,6 @@ const Home = (props) => {
   function loadProduct() {
     API.getProduct()
       .then((res) => setProducts(res.data))
-      // then(res => loadProduct())
       .catch((err) => console.log(err));
   }
 

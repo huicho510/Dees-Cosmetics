@@ -12,7 +12,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 function Navigation() {
   return (
-    <div className='menu'>
+    <nav className='menu'>
       <Navbar bg="danger" variant="dark" expand="lg">
         <Drawer />
         <Navbar.Brand href="./home">Shop City</Navbar.Brand>
@@ -33,12 +33,12 @@ function Navigation() {
         </Nav>
         </Navbar.Collapse>
         <Nav>
-          <Nav.Link href="/sign">Sign Up</Nav.Link>
+          <Nav.Link href="/sign"> <span>Hello</span> Sign Up</Nav.Link>
           <ShoppingCartIcon fontSize="large"  /> Cart
         </Nav>
         
       </Navbar>
-    </div>
+    </nav>
   );
 }
 

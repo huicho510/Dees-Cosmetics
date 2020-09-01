@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { List, ListItem } from "material-ui/List";
-import RaisedButton from "material-ui/RaisedButton";
 import Navbar from "react-bootstrap/Navbar";
+import Button from '@material-ui/core/Button';
 
 export class Confirm extends Component {
   continue = (e) => {
@@ -36,18 +36,18 @@ export class Confirm extends Component {
             <ListItem primaryText="Zip" secondaryText={zip} />
           </List>
 
-          <RaisedButton
+          <Button
             label="Confirm & Continue"
-            primary={true}
+            secondary={true}
             style={styles.button}
-            onClick={this.continue}
-          />
-          <RaisedButton
+            onClick={this.continue}>Confirm & Continue</Button>
+          
+          <Button
             label="Back"
             primary={false}
-            style={styles.button}
-            onClick={this.back}
-          />
+            style={styles.back}
+            onClick={this.back}>Back</Button>
+          
         </React.Fragment>
       </MuiThemeProvider>
       </div>
@@ -57,8 +57,23 @@ export class Confirm extends Component {
 
 const styles = {
   button: {
-    margin: 15,
+    background: 'linear-gradient(45deg, #fc5296 20%, #f67062 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    height: 45,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(250, 105, 135, .3)',
   },
+  back: {
+    margin: 10,
+    borderRadius: 3,
+    border: 0,
+    color: 'black',
+    height: 45,   
+    padding: '0 30px',
+    background: 'linear-gradient(45deg,  #d8dede 0%, #e5bdf6 90%)'
+  }
 };
 
 export default Confirm;
