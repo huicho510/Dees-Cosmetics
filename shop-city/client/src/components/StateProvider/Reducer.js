@@ -1,14 +1,19 @@
 export const initialState = {
-  cart: ["1","2"],
+  cart: [],
   user: null,
 };
 
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      }
     case "ADD_TO_CART":
       //logic for adding to cart
-      return { ...state, basket: [...state.basket, action.item],
+      return { ...state, cart: [...state.cart, action.item],
      };
     case "REMOVE_FROM_CART":
       //logic for removing

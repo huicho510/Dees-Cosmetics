@@ -1,19 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
 import Navbar from "react-bootstrap/Navbar";
 import Button from '@material-ui/core/Button';
 import "./index.css"
 
-export class FormUserDetails extends Component {
-  continue = (e) => {
+
+function FormUserDetails(props) {
+
+
+
+  const forward = (e) => {
     e.preventDefault();
-    this.props.nextStep();
+    props.nextStep();
   };
 
-  render() {
-    const { values, handleChange } = this.props;
+  const { values, handleChange } = props;
+
+
+    
+
     return (
       <div className="content">
         <MuiThemeProvider>
@@ -45,19 +51,26 @@ export class FormUserDetails extends Component {
               defaultValue={values.email}
             />
             <br />
+            <TextField
+              hintText="Enter Your password"
+              floatingLabelText="Password"
+              onChange={handleChange("password")}
+              defaultValue={values.password}
+            />
+            <br />
             <Button
               className="button"
               label="Continue"
              
               style={styles.button}
-              onClick={this.continue}>Continue
+              onClick={forward}>Continue
               </Button>
           </React.Fragment>
         </MuiThemeProvider>
       </div>
     );
   }
-}
+
 
 const styles = {
   button: {
