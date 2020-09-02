@@ -8,23 +8,28 @@ import FormControl from "react-bootstrap/FormControl";
 import Drawer from "./Drawer";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import InstagramIcon from '@material-ui/icons/Instagram';
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+import { Link } from "react-router-dom";
+import { useStateValue } from "../StateProvider/StateProvider"
+
 
 function Navigation() {
+  const [{ cart }] = useStateValue();
+  console.log(cart)
+
   return (
     <nav className='menu'>
       <Navbar bg="danger" variant="dark" expand="lg">
         <Drawer />
-        <Navbar.Brand href="./home">Shop City</Navbar.Brand>
+        <Link to="./home" className="brand">Boutique</Link>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
             
-          <Nav.Link href="//instagram.com/_deecosmetics" target="_blank"><InstagramIcon /></Nav.Link>
+          <Link to="//instagram.com/_deecosmetics" className="nav-links" target="_blank"><InstagramIcon /></Link>
             
-          <Nav.Link href="./home">Home</Nav.Link>
-          <Nav.Link href="#features">Shop</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Link to="./home" className="nav-links">Home</Link>
+          <Link to="#features" className="nav-links">Shop</Link>
+          <Link to="#pricing" className="nav-links">Pricing</Link>
 
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -33,11 +38,15 @@ function Navigation() {
         </Nav>
         </Navbar.Collapse>
         <Nav>
-          <Nav.Link href="/sign"> <span>Hello</span> Sign Up</Nav.Link>
-          <ShoppingCartIcon fontSize="large"  /> Cart
+          <Link to="/sign" className="nav-links">
+           <span >Sign Up</span>
+           </Link>
+           <Link to="/checkout" className="nav-links">
+          <ShoppingCartIcon fontSize="large" /> <span>{cart.length}</span>
+          </Link>
         </Nav>
-        
       </Navbar>
+    
     </nav>
   );
 }

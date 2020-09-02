@@ -1,16 +1,24 @@
 import React from "react";
 import "./style.css";
+import { useStateValue } from "../StateProvider/StateProvider"
 
-// const useStyles = makeStyles({
-//   root: {
-//     maxWidth:345,
-//   },
-//   media: {
-//     height: 140,
-//   },
-// });
 
 export default function Product({ id, title, image, price, rating }) {
+  const [{}, dispatch] = useStateValue();
+
+  const addToCart = () => {
+    // Add Item to basket
+    dispatch({
+      type: "ADD_TO_CART",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price
+      }
+    })
+  };
+
   return (
     <div className="product">
       <div className="product__info">
@@ -29,7 +37,7 @@ export default function Product({ id, title, image, price, rating }) {
         </div> */}
       </div>
       <img src={image} alt="" />
-      <button>Add To Basket</button>
+      <button onClick={addToCart}>Add To Basket</button>
     </div>
   );
 }

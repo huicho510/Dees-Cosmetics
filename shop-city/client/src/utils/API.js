@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all products
   // eslint-disable-next-line
-  getProduct: function() {
+  getProducts: function() {
     return axios.get("/api/product");
   },
   // Gets the products with the given id

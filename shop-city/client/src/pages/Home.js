@@ -15,7 +15,7 @@ const Home = () => {
 
   // Loads all books and sets them to books
   function loadProduct() {
-    API.getProduct()
+    API.getProducts()
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }
@@ -29,10 +29,11 @@ const Home = () => {
       />
       <div className="home__row">
         {products.map((product) => (
-          <Product key={product.id}>
-            {product.image}
-            {product.price}
-            {product.title}
+          <Product key={product.id}
+            image= {product.image}
+            price={product.price}
+            title={product.title}
+          >
           </Product>
         ))}
 
