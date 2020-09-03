@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, setState, Component } from "react";
 import FormUserDetails from "../components/FormUserDetails/index";
 import FormPersonalDetails from "../components/FormPersonalDetails/index";
 import Confirm from "../components/Confirm/index";
@@ -31,11 +31,12 @@ function UserForm (props) {
     city: "",
     bio: "",
   };
+
   // Proceeds to next step
  const nextStep = () => {
      const {step}  = state;
      this.setState({
-      step: {step} + 1,
+      step: step + 1,
     });
   };
   // Go to previos step

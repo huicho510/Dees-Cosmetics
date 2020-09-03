@@ -44,15 +44,15 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-          <ListItem button key={'electronics'}>
-            <a href='/electronics' >
-            <ListItemText primary={'electronics'} />
+          <ListItem button key={'home'}>
+            <a href='/home' >
+            <ListItemText primary={'Home'} />
             </a>
           </ListItem>
       </List>
       <Divider />
       <List>
-        {['International Shipping', 'Gift Cards', 'Food'].map((text, index) => (
+        {['Shipping fees', 'Gift Cards', 'About'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>

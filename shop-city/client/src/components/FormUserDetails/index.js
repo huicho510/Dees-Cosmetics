@@ -6,9 +6,10 @@ import Button from "@material-ui/core/Button";
 import "./index.css";
 
 function FormUserDetails(props) {
+  
   const forward = (e) => {
     e.preventDefault();
-    props.nextStep();
+    this.nextStep();
   };
 
   const { values, handleChange } = props;
