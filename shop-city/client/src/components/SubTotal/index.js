@@ -19,6 +19,7 @@ function SubTotal() {
           </>
         )}
         decimalScale={2}
+        fixedDecimalScale={true}
         value={getCartTotal(cart)}
         displayType={"text"}
         thousandSeparator={true}

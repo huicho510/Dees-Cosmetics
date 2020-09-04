@@ -4,22 +4,20 @@ import { List, ListItem } from "material-ui/List";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 
-export class Confirm extends Component {
-  continue = (e) => {
+function Confirm (props) {
+
+  const { values, nextStep, prevStep } = props;
+  const forward = (e) => {
     e.preventDefault();
     // process form //
-    this.props.nextStep();
+    nextStep();
   };
 
-  back = (e) => {
+  const back = (e) => {
     e.preventDefault();
-    this.props.prevStep();
+    prevStep();
   };
 
-  render() {
-    const {
-      values: { firstName, lastName, email, address, city, zip },
-    } = this.props;
     return (
       <div className="content">
         <MuiThemeProvider>
@@ -28,28 +26,26 @@ export class Confirm extends Component {
               <h1 className="text-dark">Confirm</h1>
             </Navbar>
             <List>
-              <ListItem primaryText="First Name" secondaryText={firstName} />
-              <ListItem primaryText="Last Name" secondaryText={lastName} />
-              <ListItem primaryText="Email" secondaryText={email} />
-              <ListItem primaryText="Address" secondaryText={address} />
-              <ListItem primaryText="City" secondaryText={city} />
-              <ListItem primaryText="Zip" secondaryText={zip} />
+              <ListItem primaryText="First Name" secondaryText={values.firstName} />
+              <ListItem primaryText="Last Name" secondaryText={values.lastName} />
+              <ListItem primaryText="Email" secondaryText={values.email} />
+              <ListItem primaryText="Address" secondaryText={values.address} />
+              <ListItem primaryText="City" secondaryText={values.city} />
+              <ListItem primaryText="Zip" secondaryText={values.zip} />
             </List>
 
             <Button
               label="Confirm & Continue"
-              secondary={true}
               style={styles.button}
-              onClick={this.continue}
+              onClick={forward}
             >
               Confirm & Continue
             </Button>
 
             <Button
               label="Back"
-              primary={false}
               style={styles.back}
-              onClick={this.back}
+              onClick={back}
             >
               Back
             </Button>
@@ -58,7 +54,7 @@ export class Confirm extends Component {
       </div>
     );
   }
-}
+
 
 const styles = {
   button: {

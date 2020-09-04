@@ -7,6 +7,7 @@ const productSchema = new Schema({
   image: {type: String, default: "",},
   href: {type: String, default: "",},
   price: {type: Number},
+  quantity:{type: Number},
   date: { type: Date, default: Date.now }
 });
 

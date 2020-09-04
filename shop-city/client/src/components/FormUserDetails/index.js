@@ -4,16 +4,12 @@ import TextField from "material-ui/TextField";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
-
 function FormUserDetails(props) {
-  
+  const { values, handleChange, nextStep } = props;
   const forward = (e) => {
     e.preventDefault();
-    this.nextStep();
+    nextStep();
   };
-
-  const { values, handleChange } = props;
-
   return (
     <div className="content">
       <MuiThemeProvider>
@@ -22,30 +18,38 @@ function FormUserDetails(props) {
             <h1 className="text-dark">Enter User Details</h1>
           </Navbar>
           <TextField
+            id="firstName"
+            name="firstName"
             hintText="Enter Your First Name"
             floatingLabelText="First Name"
-            onChange={handleChange("firstName")}
+            onChange={handleChange}
             defaultValue={values.firstName}
           />
           <br />
           <TextField
+            id="lastName"
+            name="lastName"
             hintText="Enter Your Last Name"
             floatingLabelText="Last Name"
-            onChange={handleChange("lastName")}
+            onChange={handleChange}
             defaultValue={values.lastName}
           />
           <br />
           <TextField
+            id="email"
+            name="email"
             hintText="Enter Your email"
             floatingLabelText="Email"
-            onChange={handleChange("email")}
+            onChange={handleChange}
             defaultValue={values.email}
           />
           <br />
           <TextField
+            id="password"
+            name="password"
             hintText="Enter Your password"
             floatingLabelText="Password"
-            onChange={handleChange("password")}
+            onChange={handleChange}
             defaultValue={values.password}
           />
           <br />
@@ -62,7 +66,6 @@ function FormUserDetails(props) {
     </div>
   );
 }
-
 const styles = {
   button: {
     background: "linear-gradient(45deg, #fc5296 20%, #f67062 90%)",
@@ -74,5 +77,4 @@ const styles = {
     boxShadow: "0 3px 5px 2px rgba(250, 105, 135, .3)",
   },
 };
-
 export default FormUserDetails;

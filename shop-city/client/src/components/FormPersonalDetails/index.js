@@ -5,17 +5,16 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 
-function FormPersonalDetails() {
+function FormPersonalDetails(props) {
+  const { values, handleChange, nextStep, prevStep } = props;
   const forward = (e) => {
     e.preventDefault();
-    this.props.nextStep();
+    nextStep();
   };
   const back = (e) => {
     e.preventDefault();
-    this.props.prevStep();
+    prevStep();
   };
-
-  const { values, handleChange } = this.props;
 
   return (
     <div className="content">
@@ -27,27 +26,26 @@ function FormPersonalDetails() {
           <TextField
             hintText="Street Address"
             floatingLabelText="Street Address"
-            onChange={handleChange("address")}
+            onChange={handleChange}
             defaultValue={values.address}
           />
           <br />
           <TextField
             hintText="Enter Your City"
             floatingLabelText="City"
-            onChange={handleChange("city")}
+            onChange={handleChange}
             defaultValue={values.city}
           />
           <br />
           <TextField
             hintText="Enter Your zip"
             floatingLabelText="Zip"
-            onChange={handleChange("zip")}
+            onChange={handleChange}
             defaultValue={values.zip}
           />
           <br />
           <Button
             label="Continue"
-            secondary={true}
             style={styles.button}
             onClick={forward}
           >
@@ -56,7 +54,6 @@ function FormPersonalDetails() {
 
           <Button
             label="Back"
-            primary={false}
             style={styles.back}
             onClick={back}
           >
