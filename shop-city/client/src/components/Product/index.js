@@ -3,7 +3,7 @@ import "./style.css";
 import { useStateValue } from "../StateProvider/StateProvider"
 
 
-export default function Product({ id, title, image, price, rating }) {
+export default function Product({ id, title, image, price }) {
   const [{}, dispatch] = useStateValue();
 
   const addToCart = () => {
@@ -29,13 +29,6 @@ export default function Product({ id, title, image, price, rating }) {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        {/* <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_) => (
-            <p>{"star"}</p>
-            ))}
-        </div> */}
       </div>
       <img src={image} alt="" />
       <button onClick={addToCart}>Add To Basket</button>

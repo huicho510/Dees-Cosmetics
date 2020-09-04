@@ -2,13 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-  title: {type: String,required: true, },
-  details: String,
-  // url string for thumbnail image
+  title: {type: String,required: true, unique: true },
+  details: {String},
   image: {type: String, default: "",},
-  // url for recipe web page - unique index
-  href: {type: String, default: "",unique: true,},
-  price: {type: String},
+  href: {type: String, default: "",},
+  price: {type: Number},
   date: { type: Date, default: Date.now }
 });
 
