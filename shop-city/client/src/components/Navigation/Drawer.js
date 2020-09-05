@@ -65,7 +65,7 @@ export default function SwipeableTemporaryDrawer() {
     <div>
         <React.Fragment >
   <Button onClick={toggleDrawer('left', true)}>
-    <MenuIcon className= 'menu' />
+    <MenuIcon className= 'menu-icon' />
   </Button>
           <SwipeableDrawer
             anchor={'left'}

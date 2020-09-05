@@ -26,7 +26,7 @@ function Navigation() {
 
   return (
     <nav className='menu'>
-      <Navbar bg="danger" variant="dark" expand="lg">
+      <Navbar className="nav" expand="lg">
         <Drawer />
         <Link to="./home" className="brand">Boutique</Link>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
@@ -41,7 +41,7 @@ function Navigation() {
 
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-light">Search</Button>
+            <Button variant="outline-light" className="search-button">Search</Button>
           </Form>
         </Nav>
         </Navbar.Collapse>

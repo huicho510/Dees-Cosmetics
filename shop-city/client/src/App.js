@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation/index";
 import Footer from "./components/Footer/Footer";
-import Checkout from "./components/Checkout/index"
+import Checkout from "./components/Checkout/index";
 import SignUp from "./pages/UserForm";
 import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -31,11 +31,10 @@ function App() {
     return () => {
       // clean up operation
       unsuscribe();
-    }
-
+    };
   }, []);
 
-  console.log("User is >>>", user)
+  console.log("User is >>>", user);
 
   return (
     <Router>
@@ -47,8 +46,9 @@ function App() {
         <Route exact path="/sign" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/checkout" component={Checkout} />
-
-        <Footer />
+        <div>
+          <Footer />
+        </div>
       </div>
     </Router>
   );
