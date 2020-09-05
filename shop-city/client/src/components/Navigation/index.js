@@ -15,6 +15,7 @@ import { auth } from "../../config/firebase";
 
 function Navigation() {
   const [{ cart, user }] = useStateValue();
+
   console.log(user, cart);
 
   const login = () => {
@@ -47,7 +48,8 @@ function Navigation() {
         <Nav>
         <Link to={!user && "/login"} className="nav-links">
         <div onClick={login}>
-           <span >{user ? 'Log in' : 'Log Out'} </span>
+          <span className='name'> Hello {user && user.email} </span>
+           <span >{user ? 'Log Out' : 'Log in'} </span>
            </div>
            </Link>
           <Link to="/sign" className="nav-links"> 

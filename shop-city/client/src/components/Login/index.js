@@ -15,15 +15,16 @@ function Login() {
 
     auth.signInWithEmailAndPassword(email, password)
     .then((auth) => {
-        history.pushState("/");
+        history.push("/");
     })
     .catch(e => alert(e.message));
   };
 
   return (
-    <div>
+    <div className='content'>
       <MuiThemeProvider>
         <React.Fragment>
+          <div className="login">
           <TextField
             id="email"
             name="email"
@@ -50,6 +51,7 @@ function Login() {
           >
             Log in
           </Button>
+          </div>
         </React.Fragment>
       </MuiThemeProvider>
     </div>

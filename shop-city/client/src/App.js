@@ -39,7 +39,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className="home">
         <Navigation />
 
         <Route exact path="/" component={Home} />
