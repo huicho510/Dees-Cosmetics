@@ -6,22 +6,6 @@ import Success from "../components/Success/index";
 import { auth } from "../config/firebase";
 import { useStateValue } from "../components/StateProvider/StateProvider";
 
-// const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // register = (event) => {
-  //   event.preventDefault();
-
-  //   auth
-  //     .createUserWithEmailAndPassword(this.state.email, this.state.password)
-  //     .then((auth) => {
-  //       history.pushState("/");
-  //     })
-  //     .catch((e) => alert(e.message));
-  // };
-  // const [] = useState()
-
-
 
 function UserForm() {
   const [step, setStep] = useState(1);

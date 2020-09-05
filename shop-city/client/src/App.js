@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useStateValue } from "../src/components/StateProvider/StateProvider";
 import { auth } from "./config/firebase";
+import Login from "./components/Login";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -28,6 +29,7 @@ function App() {
       }
     });
     return () => {
+      // clean up operation
       unsuscribe();
     }
 
@@ -43,6 +45,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/sign" component={SignUp} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/checkout" component={Checkout} />
 
         <Footer />

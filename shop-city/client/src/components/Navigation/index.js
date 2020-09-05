@@ -10,11 +10,18 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider"
+import { auth } from "../../config/firebase";
 
 
 function Navigation() {
-  const [{ cart }] = useStateValue();
-  console.log(cart)
+  const [{ cart, user }] = useStateValue();
+  console.log(user, cart);
+
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  }
 
   return (
     <nav className='menu'>
@@ -38,9 +45,15 @@ function Navigation() {
         </Nav>
         </Navbar.Collapse>
         <Nav>
-          <Link to="/sign" className="nav-links">
-           <span >Sign Up</span>
+        <Link to={!user && "/login"} className="nav-links">
+        <div onClick={login}>
+           <span >{user ? 'Log in' : 'Log Out'} </span>
+           </div>
            </Link>
+          <Link to="/sign" className="nav-links"> 
+           <span >Sign Up </span>
+           </Link>
+           
            <Link to="/checkout" className="nav-links">
           <ShoppingCartIcon fontSize="large" /> <span>{cart.length}</span>
           </Link>

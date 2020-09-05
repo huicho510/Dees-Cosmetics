@@ -1,10 +1,28 @@
-import React from "react";
+import React, {  useState } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
+import { auth } from "../../config/firebase";
+import { useHistory } from "react-router-dom";
+
 function FormUserDetails(props) {
+
+ const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const register = (event) => {
+    event.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((e) => alert(e.message));
+  };
+  console.log(email)
+
   const { values, handleChange, nextStep } = props;
   const forward = (e) => {
     e.preventDefault();
@@ -40,7 +58,7 @@ function FormUserDetails(props) {
             name="email"
             hintText="Enter Your email"
             floatingLabelText="Email"
-            onChange={handleChange}
+            onChange={(event) => setEmail(event.target.value)}
             defaultValue={values.email}
           />
           <br />
@@ -49,7 +67,7 @@ function FormUserDetails(props) {
             name="password"
             hintText="Enter Your password"
             floatingLabelText="Password"
-            onChange={handleChange}
+            onChange={(event) => setPassword(event.target.value)}
             defaultValue={values.password}
           />
           <br />
@@ -57,7 +75,7 @@ function FormUserDetails(props) {
             className="button"
             label="Continue"
             style={styles.button}
-            onClick={forward}
+            onClick={register}
           >
             Continue
           </Button>

@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 
+
 function FormPersonalDetails(props) {
   const { values, handleChange, nextStep, prevStep } = props;
   const forward = (e) => {
