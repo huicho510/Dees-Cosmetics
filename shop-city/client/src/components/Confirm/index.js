@@ -3,24 +3,8 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { List, ListItem } from "material-ui/List";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
-import { auth } from "../../config/firebase";
-import { useHistory } from "react-router-dom";
 
 function Confirm(props) {
-  // const history = useHistory();
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const register = (event) => {
-  //   event.preventDefault();
-  //   auth
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then((auth) => {
-  //       history.pushState("/");
-  //     })
-  //     .catch((e) => alert(e.message));
-  // };
-  // console.log(email)
-
   const { values, nextStep, prevStep } = props;
   const forward = (e) => {
     e.preventDefault();
@@ -34,7 +18,7 @@ function Confirm(props) {
   };
 
   return (
-    <div className="content">
+    <div className="confirm">
       <MuiThemeProvider>
         <React.Fragment>
           <Navbar variant="dark" className="justify-content-center">
@@ -50,13 +34,13 @@ function Confirm(props) {
               primaryText="Email"
               secondaryText={values.email}
               // value={email.values.email}
-              // onChange={(event) => setEmail(event.target.value)}
+             
             />
             <ListItem
               primaryText="Password"
               secondaryText={values.password}
               // value={password}
-              // onChange={(event) => setPassword(event.target.value)}
+             
             />
             <ListItem primaryText="Address" secondaryText={values.address} />
             <ListItem primaryText="City" secondaryText={values.city} />

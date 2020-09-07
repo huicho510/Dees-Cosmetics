@@ -3,25 +3,23 @@
   display: flex;
   flex-direction: column;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 100;
   background-image: url("../../images/marble.jpg");
-
-  /* justify-content: space-evenly; */
+  border: 1px solid gray;
 }
 .nav-links {
   color: black;
   margin: 8px;
 }
 .nav-links:hover {
-  color: rgba(58, 55, 55, 0.685);
+  color: rgba(233, 96, 226, 0.685);
   text-decoration: none;
 }
 .brand {
   color: black;
   font-size: 1.4rem;
   font-family: Georgia, Times, "Times New Roman", serif;
-  
 }
 .brand:hover {
   color: rgba(233, 96, 226, 0.685);
@@ -44,10 +42,8 @@
   flex-direction: column;
   font-size: 12px;
   font-weight: bold;
-  
 }
-.search-button{
+.search-button {
   background-color: #5b6467;
-background-image: linear-gradient(45deg, #5b6467 20%, #8b939a 90%);
-
+  background-image: linear-gradient(45deg, #c797eb 20%, #c8c2d8 99%);
 }

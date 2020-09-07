@@ -23,7 +23,6 @@ export default function Product({ id, title, image, price }) {
   return (
     <div className="product">
       <div className="product__info">
-        {/* <p>{id}</p> */}
         <p>{title}</p>
         <p className="product__price">
           <small>$</small>

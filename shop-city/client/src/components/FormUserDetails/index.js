@@ -16,20 +16,22 @@ function FormUserDetails(props) {
     event.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        history.push("/");
-      })
-      .catch((e) => alert(e.message));
+      .then(forward)
+      // .then((auth) => {
+      //   history.push("/");
+      // })
+      .catch((e) => alert(e.message))
+      
   };
   console.log(email)
 
   const { values, handleChange, nextStep } = props;
   const forward = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     nextStep();
   };
   return (
-    <div className="content">
+    <div className="User-detail">
       <MuiThemeProvider>
         <React.Fragment>
           <Navbar variant="dark" className="justify-content-center">
@@ -76,6 +78,7 @@ function FormUserDetails(props) {
             label="Continue"
             style={styles.button}
             onClick={register}
+            // onClick={forward}
           >
             Continue
           </Button>
@@ -86,13 +89,13 @@ function FormUserDetails(props) {
 }
 const styles = {
   button: {
-    background: "linear-gradient(45deg, #fc5296 20%, #f67062 90%)",
+    background: "linear-gradient(45deg, #c797eb 20%,  #c8c2d8 99%)",
     borderRadius: 3,
     border: 0,
     color: "white",
     height: 45,
     padding: "0 30px",
-    boxShadow: "0 3px 5px 2px rgba(250, 105, 135, .3)",
+    boxShadow: "0 3px 2px 2px #baa5e9",
   },
 };
 export default FormUserDetails;

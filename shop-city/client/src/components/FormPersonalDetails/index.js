@@ -18,7 +18,7 @@ function FormPersonalDetails(props) {
   };
 
   return (
-    <div className="content">
+    <div className="personal">
       <MuiThemeProvider>
         <React.Fragment>
           <Navbar variant="dark" className="justify-content-center">

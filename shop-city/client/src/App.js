@@ -11,6 +11,7 @@ import { useStateValue } from "../src/components/StateProvider/StateProvider";
 import { auth } from "./config/firebase";
 import Login from "./components/Login";
 
+
 function App() {
   const [{ user }, dispatch] = useStateValue();
 
@@ -40,7 +41,6 @@ function App() {
     <Router>
       <div className="home">
         <Navigation />
-
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/sign" component={SignUp} />
