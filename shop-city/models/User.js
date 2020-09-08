@@ -16,6 +16,21 @@ const userSchema = new Schema({
     default: Date.now,
   },
   isAdmin: { type: Boolean, required: true, default: false },
+  address: {
+    type: String,
+    required:true,
+    unique:false,
+  },
+  city: {
+    type: String,
+    required:true,
+    unique:false,
+  },
+  zip: {
+    type: String,
+    required:true,
+    unique:false,
+  },
 });
 
 const User = mongoose.model("User", userSchema);

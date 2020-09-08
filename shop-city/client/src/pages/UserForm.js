@@ -3,8 +3,8 @@ import FormUserDetails from "../components/FormUserDetails/index";
 import FormPersonalDetails from "../components/FormPersonalDetails/index";
 import Confirm from "../components/Confirm/index";
 import Success from "../components/Success/index";
-import { auth } from "../config/firebase";
-import { useStateValue } from "../components/StateProvider/StateProvider";
+import API from "../utils/USER"
+
 
 
 function UserForm() {
@@ -18,6 +18,21 @@ function UserForm() {
     city: "",
     zip: "",
   })
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (newUser.firstName && newUser.lastName) {
+      API.saveUser({
+        firstName: newUser.firstName,
+        lastName: newUser.author,
+        email: newUser.synopsis,
+        address: newUser.address,
+        city: newUser.city,
+        zip: newUser.zip
+      })
+        .catch(err => console.log(err));
+    }
+  };
+
   // Proceeds to next step
   const nextStep = () => {
     setStep(step + 1);
@@ -58,6 +73,7 @@ function UserForm() {
                 nextStep={nextStep}
                 prevStep={prevStep}
                 values={newUser}
+                onClick={handleFormSubmit}
               />
             );
           case 4:

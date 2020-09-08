@@ -29,11 +29,12 @@ function Confirm(props) {
               primaryText="First Name"
               secondaryText={values.firstName}
             />
-            <ListItem primaryText="Last Name" secondaryText={values.lastName} />
+            <ListItem primaryText="Last Name" 
+              secondaryText={values.lastName} />
             <ListItem
               primaryText="Email"
               secondaryText={values.email}
-              // value={email.values.email}
+              
              
             />
             <ListItem

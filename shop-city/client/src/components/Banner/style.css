@@ -1,8 +1,16 @@
-.home{
-  
-   padding-bottom:160px;
+@media screen and (min-width: 1171px) {
+  .banner {
+    background-image: url("../../images/banner2.gif");
+    background-repeat: no-repeat;
+    height: 428px;
+    border: 1px solid black;
+  }
 }
 
-.banner{
-    padding-bottom:auto;
+@media screen and (max-width: 500px) {
+  .banner {
+    background-image: url("../../images/mobile.gif");
+    background-repeat: no-repeat;
+    padding-bottom: 160px;
+  }
 }

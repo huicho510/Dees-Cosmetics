@@ -28,7 +28,7 @@ function Navigation() {
     <nav className='menu'>
       <Navbar className="nav" expand="lg">
         <Drawer />
-        <Link to="./home" className="brand">Boutique</Link>
+        <Link to="./home" className="brand">Dee's Cosmetics</Link>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -53,7 +53,7 @@ function Navigation() {
            </div>
            </Link>
           <Link to="/sign" className="nav-links"> 
-           <span >Sign Up </span>
+           <span >{user? ' ' : 'Sign Up'} </span>
            </Link>
            
            <Link to="/checkout" className="nav-links">

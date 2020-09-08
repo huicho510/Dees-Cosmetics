@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Product from "../components/Product/index";
-import Straw from "../images/straw.jpg";
 import "./style.css";
 import API from "../utils/API";
 import Banner from "../components/Banner/index"

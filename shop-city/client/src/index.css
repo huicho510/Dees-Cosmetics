@@ -1,8 +1,8 @@
-body{
-  
-    background: url("../src/images/marble.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin:0;
+body {
+  background: url("../src/images/marble.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(211, 211, 211, 0.8);
+  margin: 0;
 }
