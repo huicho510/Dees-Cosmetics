@@ -52,7 +52,7 @@ export default function SwipeableTemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {['Shipping fees', 'Gift Cards', 'About'].map((text, index) => (
+        {['Log In', 'Sign Up', 'About'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>
