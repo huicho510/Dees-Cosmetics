@@ -2,13 +2,19 @@
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+   
   }
   
   .home__row {
     display: flex;
+    flex-flow: row wrap;
     z-index:1;
+    justify-content: space-evenly;
     margin-left:5px;
     margin-right:5px;
+    text-align: center;
+    
+    
   }
   .home__image {
     width: 100%;
@@ -16,5 +22,9 @@
     z-index: -1;
     margin-bottom: -150px;
    
+  }
+  .form-overlay{
+    background:rgba(211, 211, 211, 0.2);
+    width:100%;
   }
   

@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { List, ListItem } from "material-ui/List";
 import Navbar from "react-bootstrap/Navbar";
@@ -34,20 +34,17 @@ function Confirm(props) {
             <ListItem
               primaryText="Email"
               secondaryText={values.email}
-              
-             
             />
             <ListItem
               primaryText="Password"
               secondaryText={values.password}
-              // value={password}
-             
             />
             <ListItem primaryText="Address" secondaryText={values.address} />
             <ListItem primaryText="City" secondaryText={values.city} />
-            <ListItem primaryText="Zip" secondaryText={values.zip} />
+            <ListItem primaryText="Zip" secondaryText={values.zip}  />
+            
           </List>
-
+         
           <Button
             label="Confirm & Continue"
             style={styles.button}
@@ -61,7 +58,9 @@ function Confirm(props) {
           </Button>
         </React.Fragment>
       </MuiThemeProvider>
+      
     </div>
+    
   );
 }
 

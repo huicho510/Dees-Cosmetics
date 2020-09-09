@@ -5,11 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 import { auth } from "../../config/firebase";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 function FormUserDetails(props) {
 
- const history = useHistory();
+//  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const register = (event) => {
@@ -38,6 +38,7 @@ function FormUserDetails(props) {
             <h1 className="text-dark">Enter User Details</h1>
           </Navbar>
           <TextField
+             style={styles.card}
             id="firstName"
             name="firstName"
             hintText="Enter Your First Name"
@@ -47,6 +48,7 @@ function FormUserDetails(props) {
           />
           <br />
           <TextField
+           style={styles.card}
             id="lastName"
             name="lastName"
             hintText="Enter Your Last Name"
@@ -56,6 +58,7 @@ function FormUserDetails(props) {
           />
           <br />
           <TextField
+            style={styles.card}
             id="email"
             name="email"
             hintText="Enter Your email"
@@ -65,6 +68,7 @@ function FormUserDetails(props) {
           />
           <br />
           <TextField
+           style={styles.card}
             id="password"
             name="password"
             hintText="Enter Your password"
@@ -97,5 +101,12 @@ const styles = {
     padding: "0 30px",
     boxShadow: "0 3px 2px 2px #baa5e9",
   },
+  card: {
+    background:"white",
+    padding:"15px",
+    borderRadius:5,
+    margin:"2px"
+  
+  }
 };
 export default FormUserDetails;

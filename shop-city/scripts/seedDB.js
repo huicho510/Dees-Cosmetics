@@ -13,9 +13,18 @@ const productSeed = [
 {
   image: "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
   title: "Bonita",
-  price: "12.99",
+  price: "11.99",
   quantity: 8,
   date: new Date(Date.now()),
+},
+{
+  image: "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
+  title: "Classy",
+  price: "11.99",
+  quantity:5,
+  date: new Date(Date.now()),
+
+
 },
 {
   image: "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
@@ -25,7 +34,34 @@ const productSeed = [
   date: new Date(Date.now()),
 
 
-}
+},
+{
+  image: "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
+  title: "Baddy",
+  price: "11.99",
+  quantity:5,
+  date: new Date(Date.now()),
+
+
+},
+{
+  image: "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
+  title: "Fuego",
+  price: "11.99",
+  quantity:5,
+  date: new Date(Date.now()),
+
+
+},
+{
+  image: "https://contestimg.wish.com/api/webimage/5b9396ce6ee7bf328db43564-large.jpg?cache_buster=70433c0838f8570e17f76c828aaefdf8",
+  title: "Diva",
+  price: "11.99",
+  quantity:5,
+  date: new Date(Date.now()),
+
+
+},
 ];
 
 db.Product

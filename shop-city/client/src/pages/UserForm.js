@@ -1,4 +1,4 @@
-import React, { useState, setState, Component } from "react";
+import React, { useState } from "react";
 import FormUserDetails from "../components/FormUserDetails/index";
 import FormPersonalDetails from "../components/FormPersonalDetails/index";
 import Confirm from "../components/Confirm/index";
@@ -47,7 +47,7 @@ function UserForm() {
     setNewUser({ ...newUser, [name]: value });
   };
   return (
-    <div>
+    <div className="form-overlay">
       {(() => {
         switch (step) {
           case 1:
@@ -72,9 +72,9 @@ function UserForm() {
               <Confirm
                 nextStep={nextStep}
                 prevStep={prevStep}
-                values={newUser}
                 onClick={handleFormSubmit}
-              />
+                values={newUser}
+              /> 
             );
           case 4:
             return (<Success />

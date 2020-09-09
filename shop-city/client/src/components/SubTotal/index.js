@@ -5,7 +5,7 @@ import "./style.css";
 import { getCartTotal } from "../StateProvider/Reducer";
 
 function SubTotal() {
-  const [{ cart }, dispatch] = useStateValue();
+  const [{ cart }] = useStateValue();
 
   return (
     <div className="subtotal">
