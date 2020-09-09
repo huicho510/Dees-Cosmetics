@@ -3,6 +3,7 @@ import { useStateValue } from "../StateProvider/StateProvider";
 import CheckoutProduct from "../CheckoutProduct/index";
 import SubTotal from "../SubTotal/index";
 import "./style.css"
+import Sale from "../../images/Holiday.gif"
 
 function Checkout() {
   const [{ cart }] = useStateValue();
@@ -10,7 +11,7 @@ function Checkout() {
   return (
     <div className="checkout">
       <div className="left-checkout">
-        <img className="checkout-ad" src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2020/img/Toys_Internet/XCM_Manual_1231847_1223960_US_us_kgg_q3_tgs_back_to_main_revision_us_en_3183154_1500x120_en_US.jpg" alt="Promo" />
+        <img className="checkout-ad" src={Sale} />
         {cart.length === 0 ? (
           <div>
             <h2>Your Shopping Cart Is Empty</h2>

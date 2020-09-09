@@ -7,7 +7,17 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .banner {
+    background-image: url("../../images/ipad.gif");
+    background-repeat: no-repeat;
+    height: 340px;
+    
+  }
+
+}
+
+@media screen and (max-width: 767px) {
   .banner {
     background-image: url("../../images/mobile.gif");
     background-repeat: no-repeat;
