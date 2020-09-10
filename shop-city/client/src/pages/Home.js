@@ -33,22 +33,9 @@ const Home = () => {
             title={product.title}
           ></Product>
         ))}
-        <Product
-          id="1232"
-          title="Lip Gloss"
-          price={8.95}
-          rating={5}
-          image="https://m.toofaced.com/media/export/cms/products/1000x1000/2f_sku_109447_1000x1000_0.jpg"
-        />
+       
       </div>
       <div className="home__row">
-        <Product
-          id="123"
-          title="Lash Applicator"
-          price={2.95}
-          rating={5}
-          image="https://images-na.ssl-images-amazon.com/images/I/61uF9PDoABL._SY355_.jpg"
-        />
       </div>
     </div>
   );

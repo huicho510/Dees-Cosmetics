@@ -45,7 +45,8 @@ function Navigation() {
           </Form>
         </Nav>
         </Navbar.Collapse>
-        <Nav>
+        <Navbar.Collapse>
+        <Nav className="ml-auto" >
         <Link to={!user && "/login"} className="nav-links">
         <div onClick={login}>
           <span className='name'> Hello {user && user.email} </span>
@@ -55,11 +56,13 @@ function Navigation() {
           <Link to="/sign" className="nav-links"> 
            <span >{user? ' ' : 'Sign Up'} </span>
            </Link>
-           
+           </Nav>
+           </Navbar.Collapse>
+           <Nav>
            <Link to="/checkout" className="nav-links">
           <ShoppingCartIcon fontSize="large" /> <span>{cart.length}</span>
-          </Link>
-        </Nav>
+          </Link> 
+          </Nav> 
       </Navbar>
     
     </nav>

@@ -30,7 +30,7 @@ export default function Product({ id, title, image, price }) {
           <strong>{price}</strong>
         </p>
       </div>
-      <img src={image}  alt="" />
+      <img className="product__image" src={image}  alt="" />
       <button onClick={addToCart}>Add To Basket</button>
     </div>
   );
