@@ -25,6 +25,8 @@ function FormPersonalDetails(props) {
             <h1 className="text-dark">Enter Personal Details</h1>
           </Navbar>
           <TextField
+            id="id"
+            name="address"
             hintText="Street Address"
             floatingLabelText="Street Address"
             onChange={handleChange}
@@ -32,6 +34,8 @@ function FormPersonalDetails(props) {
           />
           <br />
           <TextField
+            id="city"
+            name= "city"
             hintText="Enter Your City"
             floatingLabelText="City"
             onChange={handleChange}
@@ -39,6 +43,8 @@ function FormPersonalDetails(props) {
           />
           <br />
           <TextField
+            id="zip"
+            name="zip"
             hintText="Enter Your zip"
             floatingLabelText="Zip"
             onChange={handleChange}

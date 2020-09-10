@@ -3,6 +3,8 @@ import Product from "../components/Product/index";
 import "./style.css";
 import API from "../utils/API";
 import Banner from "../components/Banner/index"
+
+
 const Home = () => {
   // Setting our component's initial state
   const [products, setProducts] = useState([]);

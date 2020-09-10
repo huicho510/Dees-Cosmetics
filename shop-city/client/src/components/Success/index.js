@@ -1,33 +1,22 @@
-import React, { Component } from "react";
+import React  from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Navbar from "react-bootstrap/Navbar";
+import "./style.css"
 
-export class Success extends Component {
-  continue = (e) => {
-    e.preventDefault();
-    // process form //
-    this.props.nextStep();
-  };
-
-  back = (e) => {
-    e.preventDefault();
-    this.props.prevStep();
-  };
-
-  render() {
+function Success() {
+ 
     return (
-        <div className="content">
+        <div className="success">
       <MuiThemeProvider>
         <React.Fragment>
-          <Navbar variant="dark" className="justify-content-center">
             <h1 className="text-dark">Success</h1>
-          </Navbar>
-          <p>You Will Get an Email with Further instructions</p>
+        
+          <h4>You Will Get an Email with Further instructions</h4>
         </React.Fragment>
       </MuiThemeProvider>
       </div>
     );
   }
-}
+
 
 export default Success;

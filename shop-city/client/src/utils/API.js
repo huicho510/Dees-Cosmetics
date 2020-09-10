@@ -8,10 +8,11 @@ export default {
   },
   // Gets the products with the given id
   // eslint-disable-next-line
-  getProduct: function(id) {
-    return axios.get("/api/product/" + id);
+  
+  // getProduct: function(id) {
+  //   return axios.get("/api/product/" + id);
     
-  },
+  // },
  
   // Deletes the products with the given id
   deleteProduct: function(id) {

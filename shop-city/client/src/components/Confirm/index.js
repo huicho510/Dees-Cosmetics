@@ -3,13 +3,16 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { List, ListItem } from "material-ui/List";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
+import "./style.css"
 
 function Confirm(props) {
+  console.log(props)
   const { values, nextStep, prevStep } = props;
   const forward = (e) => {
     e.preventDefault();
     // process form //
     nextStep();
+    props.handleFormSubmit(e)
   };
 
   const back = (e) => {

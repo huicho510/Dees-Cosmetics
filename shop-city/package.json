@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "firebase": "^7.19.1",
+    "framer-motion": "^2.6.10",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.2"
   },

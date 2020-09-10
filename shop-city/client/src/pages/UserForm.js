@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormUserDetails from "../components/FormUserDetails/index";
 import FormPersonalDetails from "../components/FormPersonalDetails/index";
 import Confirm from "../components/Confirm/index";
 import Success from "../components/Success/index";
 import API from "../utils/USER"
-
 
 
 function UserForm() {
@@ -18,13 +17,20 @@ function UserForm() {
     city: "",
     zip: "",
   })
+
+  // useEffect(()=>{
+  //   console.log(newUser)
+
+  // }, [step])
+
   function handleFormSubmit(event) {
     event.preventDefault();
+    console.log("form is submiting")
     if (newUser.firstName && newUser.lastName) {
       API.saveUser({
         firstName: newUser.firstName,
-        lastName: newUser.author,
-        email: newUser.synopsis,
+        lastName: newUser.lastName,
+        email: newUser.email,
         address: newUser.address,
         city: newUser.city,
         zip: newUser.zip
@@ -72,7 +78,7 @@ function UserForm() {
               <Confirm
                 nextStep={nextStep}
                 prevStep={prevStep}
-                onClick={handleFormSubmit}
+                handleFormSubmit={handleFormSubmit}
                 values={newUser}
               /> 
             );
