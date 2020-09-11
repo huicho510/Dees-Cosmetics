@@ -7,22 +7,32 @@
   min-width: 100px;
   margin: 10px;
   padding: 20px;
-  width:350px;
+  width: 350px;
   height: 400px;
   opacity: 0.9;
   background-color: #ffffff;
- 
-  /* background-image: linear-gradient(45deg, #ffffffe5 10%, #d7e1ec 90%); */
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: .8s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
   z-index: 1;
   border-radius: 10px;
 }
+.product:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .product__info {
-  
   height: 100px;
   margin-bottom: 5px;
-  font-family: Georgia,serif;
-  font-weight:700;
+  font-family: Georgia, serif;
+  font-weight: 700;
 }
 .product__price {
   margin-top: 5px;
@@ -30,44 +40,44 @@
 
 .product > img {
   max-height: 200px;
-  background:none;
+  background: none;
   width: 250px;
   object-fit: contain;
   margin-bottom: 15px;
-  zoom:1.2;
+  zoom: 1.2;
 }
 .product > button {
-  background-image: linear-gradient(45deg, #c797eb 20%,  #c8c2d8 99%);
+  background-image: linear-gradient(45deg, #c797eb 20%, #c8c2d8 99%);
   border: 1px solid;
   border-radius: 3px;
   border: none;
   color: white;
-  box-shadow: 0 3px 5px 2px  #baa5e9;
+  box-shadow: 0 3px 5px 2px #baa5e9;
 }
-@media screen and (max-width: 500px) {
-.product {
 
-  /* display:flex; */
-  /* flex-flow: row wrap; */
-  /* height:300px; */
-  height: 480px;
-  max-height: 500px;
-  min-width: 160px; 
-}
-  .product img{
+
+@media screen and (max-width: 500px) {
+  .product {
+    height: 480px;
+    max-height: 500px;
+    min-width: 160px;
+  }
+  .product:hover{
+    transform: scale(1.1);
+
+  }
+  .product img {
     width: 100%;
     zoom: 1.5;
     min-width: 100px;
-    max-height:400px;
+    max-height: 400px;
     object-fit: contain;
-    
   }
   .product__info {
     display: inline-block;
     text-align: center;
     margin-bottom: -20px;
-    font-family: Georgia,serif;
-    font-weight:700;
+    font-family: Georgia, serif;
+    font-weight: 700;
   }
-  
 }

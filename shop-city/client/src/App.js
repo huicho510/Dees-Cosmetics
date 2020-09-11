@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useStateValue } from "../src/components/StateProvider/StateProvider";
 import { auth } from "./config/firebase";
 import Login from "./components/Login";
+import Payment from "./components/Payment/index"
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route exact path="/sign" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/checkout" component={Checkout} />
+        <Route exact path="/payment" component={Payment} />
         <div>
           <Footer />
         </div>

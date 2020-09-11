@@ -7,11 +7,10 @@ import "./style.css"
 
 function Confirm(props) {
   console.log(props)
-  const { values, nextStep, prevStep } = props;
+  const { values, prevStep } = props;
   const forward = (e) => {
     e.preventDefault();
     // process form //
-    nextStep();
     props.handleFormSubmit(e)
   };
 
@@ -37,10 +36,6 @@ function Confirm(props) {
             <ListItem
               primaryText="Email"
               secondaryText={values.email}
-            />
-            <ListItem
-              primaryText="Password"
-              secondaryText={values.password}
             />
             <ListItem primaryText="Address" secondaryText={values.address} />
             <ListItem primaryText="City" secondaryText={values.city} />

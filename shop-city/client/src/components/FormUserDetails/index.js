@@ -5,25 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 import { auth } from "../../config/firebase";
-// import { useHistory } from "react-router-dom";
+
 
 function FormUserDetails(props) {
-
-//  const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const register = (event) => {
-    event.preventDefault();
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then(forward)
-      // .then((auth) => {
-      //   history.push("/");
-      // })
-      .catch((e) => alert(e.message))
-      
-  };
-  console.log(email)
 
   const { values, handleChange, nextStep } = props;
   const forward = (e) => {
@@ -63,7 +47,7 @@ function FormUserDetails(props) {
             name="email"
             hintText="Enter Your email"
             floatingLabelText="Email"
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={handleChange}
             defaultValue={values.email}
           />
           <br />
@@ -73,7 +57,7 @@ function FormUserDetails(props) {
             name="password"
             hintText="Enter Your password"
             floatingLabelText="Password"
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={handleChange}
             defaultValue={values.password}
           />
           <br />
@@ -81,8 +65,7 @@ function FormUserDetails(props) {
             className="button"
             label="Continue"
             style={styles.button}
-            onClick={register}
-            // onClick={forward}
+             onClick={forward}
           >
             Continue
           </Button>

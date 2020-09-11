@@ -31,6 +31,7 @@ function FormPersonalDetails(props) {
             floatingLabelText="Street Address"
             onChange={handleChange}
             defaultValue={values.address}
+            style={styles.card}
           />
           <br />
           <TextField
@@ -40,6 +41,7 @@ function FormPersonalDetails(props) {
             floatingLabelText="City"
             onChange={handleChange}
             defaultValue={values.city}
+            style={styles.card}
           />
           <br />
           <TextField
@@ -49,6 +51,7 @@ function FormPersonalDetails(props) {
             floatingLabelText="Zip"
             onChange={handleChange}
             defaultValue={values.zip}
+            style={styles.card}
           />
           <br />
           <Button
@@ -91,6 +94,13 @@ const styles = {
     padding: "0 30px",
     background: "linear-gradient(45deg,  #d8dede 0%, #e5bdf6 90%)",
   },
+  card: {
+    background:"white",
+    padding:"15px",
+    borderRadius:5,
+    margin:"2px"
+  
+  }
 };
 
 export default FormPersonalDetails;

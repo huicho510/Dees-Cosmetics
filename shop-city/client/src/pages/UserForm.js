@@ -3,8 +3,8 @@ import FormUserDetails from "../components/FormUserDetails/index";
 import FormPersonalDetails from "../components/FormPersonalDetails/index";
 import Confirm from "../components/Confirm/index";
 import Success from "../components/Success/index";
-import API from "../utils/USER"
-
+import API from "../utils/USER";
+import { auth } from "../config/firebase";
 
 function UserForm() {
   const [step, setStep] = useState(1);
@@ -16,7 +16,7 @@ function UserForm() {
     address: "",
     city: "",
     zip: "",
-  })
+  });
 
   // useEffect(()=>{
   //   console.log(newUser)
@@ -25,19 +25,25 @@ function UserForm() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log("form is submiting")
+    console.log("form is submiting");
     if (newUser.firstName && newUser.lastName) {
-      API.saveUser({
-        firstName: newUser.firstName,
-        lastName: newUser.lastName,
-        email: newUser.email,
-        address: newUser.address,
-        city: newUser.city,
-        zip: newUser.zip
-      })
-        .catch(err => console.log(err));
+      auth
+        .createUserWithEmailAndPassword(newUser.email, newUser.password)
+        .then((result) => {
+          console.log(result);
+          API.saveUser({
+            firstName: newUser.firstName,
+            lastName: newUser.lastName,
+            email: newUser.email,
+            address: newUser.address,
+            city: newUser.city,
+            zip: newUser.zip,
+          }).then((x) => nextStep());
+        })
+
+        .catch((e) => alert(e.message));
     }
-  };
+  }
 
   // Proceeds to next step
   const nextStep = () => {
@@ -80,16 +86,13 @@ function UserForm() {
                 prevStep={prevStep}
                 handleFormSubmit={handleFormSubmit}
                 values={newUser}
-              /> 
+              />
             );
           case 4:
-            return (<Success />
-            )
+            return <Success />;
         }
       })()}
     </div>
-  )
+  );
 }
 export default UserForm;
-
-
