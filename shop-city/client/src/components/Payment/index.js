@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { useStateValue } from "../StateProvider/StateProvider";
 import CheckoutProduct from "../CheckoutProduct/index";
@@ -6,10 +6,14 @@ import { Link } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "../StateProvider/Reducer";
+import { useHistory } from "react-router-dom";
+import axios from '../../utils/AXIOS'
+
 
 function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
 
+  const history= useHistory();
   const stripe = useStripe();
   const elements = useElements();
 
@@ -17,9 +21,47 @@ function Payment() {
   const [processing, setProcessing] = useState("");
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
-  
+  const [clientSecret, setClientSecret] = useState('');
 
-  const handleSubmit = (e) => {};
+  useEffect(() => {
+    // generate the unique stripe secret which allows us to charge a customer
+
+    const getClientSecret = async () => {
+        const response = await axios({
+            method: 'post',
+            // Stripe expects the total in a currencies subunits
+            url: `/payments/create?total=${getCartTotal(cart) * 100}`
+        });
+        setClientSecret(response.data.clientSecret)
+    }
+
+    getClientSecret();
+  }, [cart])
+
+
+
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+      setProcessing(true);
+
+       const payload = await stripe.confirmCardPayment(clientSecret, {
+           payment_method: {
+               card: elements.getElement(CardElement)
+           }
+       }).then(({ paymentIntent }) =>{
+           // paymentIntent = payment confirmation
+            console.log(paymentIntent)
+           setSucceeded(true);
+           setError(null)
+           setProcessing(false)
+
+           dispatch({
+               type:'EMPTY_CART'
+           })
+           
+           history.replace('/orders')
+       }) 
+  };
 
   const handleChange = (event) => {
     //display errors as customer types card details
@@ -40,6 +82,7 @@ function Payment() {
           </div>
           <div className="payment-address">
             <p>{user && user.email}</p>
+            <p>95688</p>
           </div>
         </div>
         {/* review items */}

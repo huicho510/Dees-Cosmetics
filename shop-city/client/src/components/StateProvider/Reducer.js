@@ -18,6 +18,13 @@ const reducer = (state, action) => {
       //logic for adding to cart
       return { ...state, cart: [...state.cart, action.item],
      };
+
+     case "EMPTY_CART":
+       return {
+         ...state,
+         cart: []
+       };
+
     case "REMOVE_FROM_CART":
       //logic for removing
 
