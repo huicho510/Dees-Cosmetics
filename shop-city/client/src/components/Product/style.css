@@ -15,7 +15,8 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.3s;
-  transition-duration: .8s;
+  transition-duration: 0.8s;
+  transition-delay: .5s;
   -webkit-transition-property: transform;
   transition-property: transform;
   z-index: 1;
@@ -24,8 +25,9 @@
 .product:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.2);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .product__info {
