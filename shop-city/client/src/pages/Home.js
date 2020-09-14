@@ -9,12 +9,12 @@ const Home = () => {
   // Setting our component's initial state
   const [products, setProducts] = useState([]);
 
-  // Load all books and store them with setBooks
+
   useEffect(() => {
     loadProduct();
   }, []);
 
-  // Loads all books and sets them to books
+ 
   function loadProduct() {
     API.getProducts()
       .then((res) => setProducts(res.data))

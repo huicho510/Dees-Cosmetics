@@ -16,7 +16,7 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.8s;
-  transition-delay: .5s;
+  transition-delay: .8s;
   -webkit-transition-property: transform;
   transition-property: transform;
   z-index: 1;
