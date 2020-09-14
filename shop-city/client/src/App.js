@@ -11,6 +11,7 @@ import { useStateValue } from "../src/components/StateProvider/StateProvider";
 import { auth } from "./config/firebase";
 import Login from "./components/Login";
 import Payment from "./components/Payment/index";
+import Orders from "./components/Orders/index"
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
@@ -55,6 +56,8 @@ function App() {
         <Route exact path="/payment">
           <Elements stripe={promise}><Payment /></Elements>
           </Route>
+          <Route exact path="/orders" component={Orders} />
+        
         <div>
           <Footer />
         </div>

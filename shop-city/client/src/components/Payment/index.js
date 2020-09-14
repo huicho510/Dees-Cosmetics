@@ -7,7 +7,8 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "../StateProvider/Reducer";
 import { useHistory } from "react-router-dom";
-import axios from '../../utils/AXIOS'
+import axios from '../../utils/AXIOS';
+import db from '../../config/firebase'
 
 
 function Payment() {
@@ -50,7 +51,8 @@ function Payment() {
            }
        }).then(({ paymentIntent }) =>{
            // paymentIntent = payment confirmation
-            console.log(paymentIntent)
+            
+
            setSucceeded(true);
            setError(null)
            setProcessing(false)
