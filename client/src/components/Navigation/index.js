@@ -2,9 +2,9 @@ import React from "react";
 import "./style.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+// import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap/Form";
+// import FormControl from "react-bootstrap/FormControl";
 import Drawer from "./Drawer";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -46,11 +46,11 @@ function Navigation() {
             <Link to="./home" className="nav-links">
               Home
             </Link>
-            <Link to="#features" className="nav-links">
+            <Link to="/shop" className="nav-links">
               Shop
             </Link>
-            <Link to="#pricing" className="nav-links">
-              Pricing
+            <Link to="/about" className="nav-links">
+              About
             </Link>
 
 
@@ -58,7 +58,7 @@ function Navigation() {
       refreshFunction={updateSearchTerms}
       
       /> */}
-            <Form inline>
+            {/* <Form inline>
               <FormControl
                 type="text"
                 placeholder="Search"
@@ -67,7 +67,7 @@ function Navigation() {
               <Button variant="outline-light" className="search-button">
                 Search
               </Button>
-            </Form>
+            </Form> */}
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse>

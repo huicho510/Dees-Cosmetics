@@ -23,6 +23,7 @@ function Confirm(props) {
     <div className="confirm">
       <MuiThemeProvider>
         <React.Fragment>
+        <h4 className="login-head">Dee's Cosmetics</h4>
           <Navbar variant="dark" className="justify-content-center">
             <h1 className="text-dark">Confirm</h1>
           </Navbar>
@@ -64,22 +65,22 @@ function Confirm(props) {
 
 const styles = {
   button: {
-    background: "linear-gradient(45deg, #fc5296 20%, #f67062 90%)",
+    background: "linear-gradient(45deg, #c797eb 20%,  #c8c2d8 99%)",
     borderRadius: 3,
     border: 0,
     color: "white",
     height: 45,
     padding: "0 30px",
-    boxShadow: "0 3px 5px 2px rgba(250, 105, 135, .3)",
+     boxShadow: "0 3px 2px 2px #baa5e9"
   },
   back: {
     margin: 10,
     borderRadius: 3,
     border: 0,
-    color: "black",
+    color: "white",
     height: 45,
     padding: "0 30px",
-    background: "linear-gradient(45deg,  #d8dede 0%, #e5bdf6 90%)",
+    background: "linear-gradient(45deg, #f876de 20%, #e61d8c 99%)",
   },
 };
 

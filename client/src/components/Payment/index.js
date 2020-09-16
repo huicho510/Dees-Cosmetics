@@ -87,9 +87,9 @@ function Payment() {
         </h1>
         {/* delivery adress */}
         <div className="payment-section">
-          <div className="payment-title">
+          {/* <div className="payment-title">
             <h3>Delivery Address</h3>
-          </div>
+          </div> */}
           <div className="payment-address">
             <p>{user && user.email}</p>
             <p></p>
@@ -98,7 +98,7 @@ function Payment() {
         {/* review items */}
         <div className="payment-section">
           <div className="payment-title">
-            <h3>Review items and delivery</h3>
+            <h3>Review items</h3>
           </div>
           <div className="payment-items">
             {cart.map((item) => {

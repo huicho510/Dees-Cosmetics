@@ -24,12 +24,14 @@ function Login() {
     <div className='content'>
       <MuiThemeProvider>
         <React.Fragment>
-          <div className="login">
+        <h4 className="login-head">Dee's Cosmetics</h4>
+          <div className="login">   
           <TextField
             id="email"
             name="email"
             hintText="Enter Your email"
             floatingLabelText="Email"
+            style={styles.card}
             onChange={event => setEmail(event.target.value)}
             // defaultValue={values.email}
           />
@@ -39,6 +41,7 @@ function Login() {
             name="password"
             hintText="Enter Your password"
             floatingLabelText="Password"
+            style={styles.card}
             onChange={event => setPassword(event.target.value)}
             // defaultValue={values.password}
           />
@@ -59,15 +62,22 @@ function Login() {
 }
 
 const styles = {
-    button: {
-      background: "linear-gradient(45deg, #fc5296 20%, #f67062 90%)",
-      borderRadius: 3,
-      border: 0,
-      color: "white",
-      height: 45,
-      padding: "0 30px",
-      boxShadow: "0 3px 5px 2px rgba(250, 105, 135, .3)",
-    }
+  button: {
+    background: "linear-gradient(45deg, #c797eb 20%,  #c8c2d8 99%)",
+    borderRadius: 3,
+    border: 0,
+    color: "white",
+    height: 45,
+    padding: "0 30px",
+    boxShadow: "0 3px 2px 2px #baa5e9",
+  },
+  card: {
+    background:"white",
+    padding:"15px",
+    borderRadius:5,
+    margin:"2px"
+  
+  }
 };
 
 export default Login;

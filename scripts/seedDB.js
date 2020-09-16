@@ -1,40 +1,39 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/store");
 
 // Create seeds below
 const productSeed = [
   {
     image:
-      "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
-    title: "Bonita",
+      "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-0/p600x600/119128339_374697880598539_4976649681774087810_o.jpg?_nc_cat=106&_nc_sid=a26aad&_nc_ohc=e3lQVNVWlXMAX93KXLB&_nc_ht=scontent-sjc3-1.xx&tp=6&oh=bb3816e039d2fc1b9db22664eb84310a&oe=5F894AAB",
+    title: "Vibe",
     price: "10.99",
     quantity: 8,
     date: new Date(Date.now()),
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
-    title: "Classy",
+      "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/116883182_341492843919043_2805766943423253124_o.jpg?_nc_cat=109&_nc_sid=9267fe&_nc_ohc=vU0Glj198fwAX_lU9HG&_nc_ht=scontent-sjc3-1.xx&oh=362d8bb2be8417ae7f8841ecce9365c2&oe=5F872D35",
+    title: "Love",
     price: "10.99",
     quantity: 5,
     date: new Date(Date.now()),
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/2634/9716/products/extra-NEW-copy_720x.jpg?v=1584447731",
-    title: "Fuego",
+      "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/106715949_317666726301655_588515361485473964_o.jpg?_nc_cat=109&_nc_sid=9267fe&_nc_ohc=pvLlhQAap0QAX_39ljJ&_nc_ht=scontent-sjc3-1.xx&oh=7597e616c3c9854213c07d829ebdd2db&oe=5F87BABC",
+    title: "Estrella",
     price: "10.99",
     quantity: 5,
     date: new Date(Date.now()),
   },
   {
     image:
-      "https://contestimg.wish.com/api/webimage/5b9396ce6ee7bf328db43564-large.jpg?cache_buster=70433c0838f8570e17f76c828aaefdf8",
-    title: "Marble brushes",
-    price: "10.99",
+      "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/108995070_325930472141947_534707308025832410_o.jpg?_nc_cat=111&_nc_sid=a26aad&_nc_ohc=htFeTziQ5dwAX9V0zfd&_nc_oc=AQlEwA-9JB_n1kWu29D7SgSPCLdwh1u7qMhU6bsBUtes5bjJ1L_OMTGQEs0RZJAr4Ss&_nc_ht=scontent-sjc3-1.xx&oh=213235fb3d2614b2535b6390dc8c18db&oe=5F89D374",
+    title: "Lip Gloss",
+    price: "5.99",
     quantity: 5,
     date: new Date(Date.now()),
   },
@@ -74,6 +73,14 @@ const productSeed = [
     image:
       "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/p843x403/117230874_346376650097329_3257080310744035871_o.jpg?_nc_cat=105&_nc_sid=9267fe&_nc_ohc=DdJGxw2V4EoAX-zjEQ9&_nc_ht=scontent-sjc3-1.xx&tp=6&oh=94565216c8c8dda9ac7fe60310e5c122&oe=5F7EE2FA",
     title: "Fierce",
+    price: "10.99",
+    quantity: 5,
+    date: new Date(Date.now()),
+  },
+  {
+    image:
+      "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/116269140_341353020599692_4542976211358077617_o.jpg?_nc_cat=110&_nc_sid=9267fe&_nc_ohc=YhKS0SPqh8kAX_N26_d&_nc_ht=scontent-sjc3-1.xx&oh=1000f451b8bbf2e022635e6f73f53c7a&oe=5F87BBD7",
+    title: "Aquarius",
     price: "10.99",
     quantity: 5,
     date: new Date(Date.now()),

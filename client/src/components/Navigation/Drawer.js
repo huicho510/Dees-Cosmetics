@@ -8,6 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import InstagramIcon from "@material-ui/icons/Instagram";
 import './drawer.css'
 
 
@@ -78,6 +79,12 @@ export default function SwipeableTemporaryDrawer() {
           <ListItem button key={'Orders'}>
             <a href='/orders' >
             <ListItemText primary={'Orders'} />
+            </a>
+          </ListItem>
+          <ListItem button key={'IG'}>
+            <a href='//instagram.com/_deecosmetics' target="_blank" >
+            <InstagramIcon /> Instagram
+            {/* <ListItemText primary={'Instagram'} /> */}
             </a>
           </ListItem>
 

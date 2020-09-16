@@ -18,8 +18,9 @@ function FormUserDetails(props) {
     <div className="User-detail">
       <MuiThemeProvider>
         <React.Fragment>
+        <h4 className="login-head">Dee's Cosmetics</h4>
           <Navbar variant="dark" className="justify-content-center">
-            <h1 className="text-dark">Enter User Details</h1>
+            <h2 className="text-dark">Enter User Details</h2>
           </Navbar>
           <TextField
              style={styles.card}
