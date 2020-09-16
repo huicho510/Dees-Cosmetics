@@ -37,7 +37,7 @@ app.post("/payments/create", async (request, response) => {
 
 app.use(apiRoutes);
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Store", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/store", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
