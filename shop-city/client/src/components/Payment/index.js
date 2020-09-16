@@ -8,7 +8,6 @@ import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "../StateProvider/Reducer";
 import axios from "../../utils/AXIOS";
 import { db } from "../../config/firebase";
-import Product from "../Product/index"
 
 function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
@@ -38,8 +37,6 @@ function Payment() {
     getClientSecret();
   }, [cart]);
 
-  console.log("hi", user);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
@@ -52,16 +49,16 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
-        // db
-        //   .collection("users")
-        //   .doc(user && user.uid)
-        //   .collection("orders")
-        //   .doc(paymentIntent.id)
-        //   .set({
-        //     cart: cart,
-        //     amount: paymentIntent.amount,
-        //     created: paymentIntent.created
-        //   })
+        db
+          .collection("users")
+          .doc(user && user.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            cart: cart,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created
+          })
 
         setSucceeded(true);
         setError(null);
@@ -103,14 +100,16 @@ function Payment() {
             <h3>Review items and delivery</h3>
           </div>
           <div className="payment-items">
-            {cart.map((item) => (
+            {cart.map((item) => { console.log(item);
+            return (
               <CheckoutProduct
+                key={item.id}
                 id={item.id}
                 image={item.image}
                 price={item.price}
                 title={item.title}
               />
-            ))}
+            )})}
           </div>
         </div>
 

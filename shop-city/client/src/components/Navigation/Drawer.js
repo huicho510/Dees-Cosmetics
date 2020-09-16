@@ -8,12 +8,14 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import './drawer.css'
 
 
 
 const useStyles = makeStyles({
   list: {
     width: 250,
+    
   },
   fullList: {
     width: 'auto',
@@ -51,14 +53,14 @@ export default function SwipeableTemporaryDrawer() {
           </ListItem>
       </List>
       <Divider />
-      <List>
+      <List className="list-style">
         
           <ListItem button key={'Log In'}>
             <a href='/login' >
             <ListItemText primary={'Log In'} />
             </a>
           </ListItem>
-          <ListItem button key={'Sign Up'}>
+          <ListItem button key={'Sign Up'} >
             <a href='/sign' >
             <ListItemText primary={'Sign Up'} />
             </a>
@@ -71,6 +73,11 @@ export default function SwipeableTemporaryDrawer() {
           <ListItem button key={'Cart'}>
             <a href='/checkout' >
             <ListItemText primary={'Shopping Cart'} />
+            </a>
+          </ListItem>
+          <ListItem button key={'Orders'}>
+            <a href='/orders' >
+            <ListItemText primary={'Orders'} />
             </a>
           </ListItem>
 

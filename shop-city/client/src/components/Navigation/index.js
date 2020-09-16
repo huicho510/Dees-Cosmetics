@@ -11,17 +11,20 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 import { auth } from "../../config/firebase";
+// import SearchFunction from "../Search";
 
 function Navigation() {
   const [{ cart, user }] = useStateValue();
-
-  console.log(user, cart);
-
+  // const [SearchTerms, setSearchTerms] = useState("")
   const login = () => {
     if (user) {
       auth.signOut();
     }
   };
+
+  // const updateSearchTerms = (newSearchTerm) => {
+  //   setSearchTerms(newSearchTerm)
+  // }
 
   return (
     <nav className="menu">
@@ -50,6 +53,11 @@ function Navigation() {
               Pricing
             </Link>
 
+
+      {/* <SearchFunction 
+      refreshFunction={updateSearchTerms}
+      
+      /> */}
             <Form inline>
               <FormControl
                 type="text"
