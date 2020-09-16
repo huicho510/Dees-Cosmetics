@@ -92,7 +92,7 @@ function Payment() {
           </div>
           <div className="payment-address">
             <p>{user && user.email}</p>
-            <p>95688</p>
+            <p></p>
           </div>
         </div>
         {/* review items */}
