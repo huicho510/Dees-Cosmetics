@@ -4,9 +4,8 @@ const path = require("path");
 const apiRoutes = require("./routes");
 const functions = require("firebase-functions");
 const cors = require("cors");
-const stripe = require("stripe")(
-  "sk_test_51HPEvLG6var28apxGvcacQOO41tuzRRF1PLuNVOeVNeVvrKZkONIoiBhsm1ZTsPoQqYJflJXEk2b1wthXrBz70fK00anllVMqa"
-);
+const dotenv = require("dotenv").config()
+const stripe = require("stripe")( process.env.STRIPE_KEY);
 
 const app = express();
 const PORT = process.env.PORT || 3001;

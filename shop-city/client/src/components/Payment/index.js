@@ -49,7 +49,8 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
-        db.collection("users")
+        db
+          .collection("users")
           .doc(user && user.uid)
           .collection("orders")
           .doc(paymentIntent.id)

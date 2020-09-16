@@ -79,15 +79,6 @@ const productSeed = [
     quantity: 5,
     date: new Date(Date.now()),
   },
-  {
-    image:
-      "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/p843x403/117230874_346376650097329_3257080310744035871_o.jpg?_nc_cat=105&_nc_sid=9267fe&_nc_ohc=DdJGxw2V4EoAX-zjEQ9&_nc_ht=scontent-sjc3-1.xx&tp=6&oh=94565216c8c8dda9ac7fe60310e5c122&oe=5F7EE2FA",
-    title: "test",
-    price: "10.99",
-    quantity: 5,
-    id:"222",
-    date: new Date(Date.now()),
-  },
 ];
 
 db.Product.deleteMany({})
