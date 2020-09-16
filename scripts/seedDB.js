@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Store");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/store");
 
 // Create seeds below
 const productSeed = [
