@@ -1,10 +1,10 @@
-import React, {  useState } from "react";
+import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "@material-ui/core/Button";
 import "./index.css";
-import { auth } from "../../config/firebase";
+
 
 
 function FormUserDetails(props) {

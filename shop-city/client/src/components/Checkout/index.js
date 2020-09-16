@@ -2,8 +2,8 @@ import React from "react";
 import { useStateValue } from "../StateProvider/StateProvider";
 import CheckoutProduct from "../CheckoutProduct/index";
 import SubTotal from "../SubTotal/index";
-import "./style.css"
-import Sale from "../../images/Holiday.gif"
+import "./style.css";
+import Sale from "../../images/Holiday.gif";
 
 function Checkout() {
   const [{ cart }] = useStateValue();
@@ -11,7 +11,7 @@ function Checkout() {
   return (
     <div className="checkout">
       <div className="left-checkout">
-        <img className="checkout-ad" src={Sale} />
+        <img className="checkout-ad" src={Sale} alt="Huge Sale" />
         {cart.length === 0 ? (
           <div>
             <h2>Your Shopping Cart Is Empty</h2>

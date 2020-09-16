@@ -11,10 +11,11 @@ function Order({ order }) {
       <p>{moment.unix(order.data.created).format("MMMM Do YYYY, h:mma")}</p>
 
       <p className="order-id">
-        <small>{order.id}</small>
+        <small>Order id: {order.id}</small>
       </p>
       {order.data.cart.map((item) => (
         <CheckoutProduct
+          key={item.id}
           id={item.id}
           title={item.title}
           image={item.image}

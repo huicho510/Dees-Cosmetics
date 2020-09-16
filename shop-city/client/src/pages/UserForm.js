@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import FormUserDetails from "../components/FormUserDetails/index";
 import FormPersonalDetails from "../components/FormPersonalDetails/index";
 import Confirm from "../components/Confirm/index";
@@ -17,11 +17,6 @@ function UserForm() {
     city: "",
     zip: "",
   });
-
-  // useEffect(()=>{
-  //   console.log(newUser)
-
-  // }, [step])
 
   function handleFormSubmit(event) {
     event.preventDefault();
