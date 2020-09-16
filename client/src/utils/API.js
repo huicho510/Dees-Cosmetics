@@ -4,7 +4,7 @@ export default {
   // Gets all products
   // eslint-disable-next-line
   getProducts: function() {
-    return axios.get("/api/product");
+    return axios.get("/Store/product");
   },
   // Gets the products with the given id
   // eslint-disable-next-line
