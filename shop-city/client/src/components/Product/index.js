@@ -4,10 +4,12 @@ import { useStateValue } from "../StateProvider/StateProvider"
 
 
 export default function Product({ id, title, image, price }) {
-  const [{}, dispatch] = useStateValue();
+  const [{cart}, dispatch] = useStateValue();
+
+  console.log("this is the cart", cart)
 
   const addToCart = () => {
-    console.log(id, title)
+    console.log( id,title)
     // Add Item to basket
     dispatch({
       type: "ADD_TO_CART",

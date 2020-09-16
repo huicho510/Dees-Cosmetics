@@ -73,6 +73,9 @@ function Navigation() {
             <Link to="/sign" className="nav-links">
               <span>{user ? " " : "Sign Up"} </span>
             </Link>
+            <Link to='/orders' className="nav-links">
+              <span>Orders</span>
+            </Link>
           </Nav>
         </Navbar.Collapse>
         <Nav>

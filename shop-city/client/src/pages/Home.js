@@ -9,7 +9,7 @@ const Home = () => {
   // Setting our component's initial state
   const [products, setProducts] = useState([]);
 
-
+  console.log(products)
   useEffect(() => {
     loadProduct();
   }, []);
@@ -17,11 +17,15 @@ const Home = () => {
  
   function loadProduct() {
     API.getProducts()
+    
       .then((res) => setProducts(res.data))
+      
       .catch((err) => console.log(err));
+     
   }
-
+  
   return (
+   
     <div className="home">
       <Banner />
       <div className="home__row" >
@@ -32,8 +36,9 @@ const Home = () => {
             price={product.price}
             title={product.title}
           ></Product>
+         
         ))}
-       
+    
       </div>
       <div className="home__row">
       </div>

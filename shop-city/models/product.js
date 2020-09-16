@@ -8,6 +8,7 @@ const productSchema = new Schema({
   href: {type: String, default: "",},
   price: {type: Number},
   quantity:{type: Number},
+  id:{type: String, required:false},
   date: { type: Date, default: Date.now }
 });
 

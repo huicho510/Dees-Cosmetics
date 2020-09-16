@@ -8,6 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "../StateProvider/Reducer";
 import axios from "../../utils/AXIOS";
 import { db } from "../../config/firebase";
+import Product from "../Product/index"
 
 function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
@@ -51,16 +52,16 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
-
-        db.collection("users")
-          .doc(user && user.uid)
-          .collection("orders")
-          .doc(paymentIntent.id)
-          .set({
-            cart: cart,
-            amount: paymentIntent.amount,
-            created: paymentIntent.created,
-          });
+        // db
+        //   .collection("users")
+        //   .doc(user && user.uid)
+        //   .collection("orders")
+        //   .doc(paymentIntent.id)
+        //   .set({
+        //     cart: cart,
+        //     amount: paymentIntent.amount,
+        //     created: paymentIntent.created
+        //   })
 
         setSucceeded(true);
         setError(null);
@@ -141,7 +142,7 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <button className="pay-btn" disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
