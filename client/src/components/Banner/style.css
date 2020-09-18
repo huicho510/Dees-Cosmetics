@@ -17,9 +17,17 @@
 
 }
 
+
 @media screen and (max-width: 767px) {
   .banner {
     background-image: url("../../images/mobile.gif");
+    background-repeat: no-repeat;
+    padding-bottom: 160px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .banner {
+    background-image: url("../../images/iphone.gif");
     background-repeat: no-repeat;
     padding-bottom: 160px;
   }
