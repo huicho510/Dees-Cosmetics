@@ -1,10 +1,4 @@
 body {
-  /* background: url("../src/images/marble.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-   */
-   /* background: rgba(148, 187, 233, 100); */
    background: radial-gradient(circle,  #eccffa 0%,   #d8dede  100%);
 
 }

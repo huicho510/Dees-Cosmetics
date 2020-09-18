@@ -47,3 +47,17 @@
   background-color: #5b6467;
   background-image: linear-gradient(45deg, #c797eb 20%, #c8c2d8 99%);
 }
+
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .menu{
+    background-image: none;
+    background-color:#eccffa ;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu{
+    background-image: none;
+    background-color:#eccffa ;
+  }
+}
