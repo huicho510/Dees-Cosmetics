@@ -24,8 +24,7 @@ function UserForm() {
     if (newUser.firstName && newUser.lastName) {
       auth
         .createUserWithEmailAndPassword(newUser.email, newUser.password)
-        .then((result) => {
-          console.log(result);
+        .then(() => {
           API.saveUser({
             firstName: newUser.firstName,
             lastName: newUser.lastName,

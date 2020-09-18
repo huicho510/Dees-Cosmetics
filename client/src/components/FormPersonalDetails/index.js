@@ -26,7 +26,7 @@ function FormPersonalDetails(props) {
             <h1 className="text-dark">Enter Personal Details</h1>
           </Navbar>
           <TextField
-            id="id"
+            id="address"
             name="address"
             hintText="Street Address"
             floatingLabelText="Street Address"

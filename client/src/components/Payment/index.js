@@ -11,7 +11,7 @@ import { db } from "../../config/firebase";
 
 function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
-
+ 
   const history = useHistory();
   const stripe = useStripe();
   const elements = useElements();
@@ -36,7 +36,6 @@ function Payment() {
 
     getClientSecret();
   }, [cart]);
-  console.log("hi", user);
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
@@ -87,12 +86,12 @@ function Payment() {
         </h1>
         {/* delivery adress */}
         <div className="payment-section">
-          {/* <div className="payment-title">
+          <div className="payment-title">
             <h3>Delivery Address</h3>
-          </div> */}
-          <div className="payment-address">
+            <p>Items will ship to address listed on your account</p>
+          </div>
+          <div className="payment-address">   
             <p>{user && user.email}</p>
-            <p></p>
           </div>
         </div>
         {/* review items */}
@@ -102,7 +101,6 @@ function Payment() {
           </div>
           <div className="payment-items">
             {cart.map((item) => {
-              console.log(item);
               return (
                 <CheckoutProduct
                   key={item.id}

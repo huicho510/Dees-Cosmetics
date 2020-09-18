@@ -6,7 +6,6 @@ import Button from "@material-ui/core/Button";
 import "./style.css"
 
 function Confirm(props) {
-  console.log(props)
   const { values, prevStep } = props;
   const forward = (e) => {
     e.preventDefault();
