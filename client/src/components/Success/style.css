@@ -1,4 +1,13 @@
-.success{
-    text-align: center;
-    
+.success {
+  text-align: center;
+}
+
+.shop-btn {
+  margin: 10px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  height: 45px;
+  padding: 0 30px;
+  background: linear-gradient(45deg, #f876de 20%, #e61d8c 99%);
 }
