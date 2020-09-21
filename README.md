@@ -1,6 +1,6 @@
 # Dee's Cosmetics
 
-## Description
+    For all your beauty needs.
 
 ## Table of Contents
 
@@ -50,3 +50,5 @@
 - Javascript
 
 ## Screenshot
+
+<iframe src="https://drive.google.com/file/d/1P57hmfaOL4H6zK-mKRLqCAn_ryGS6yMO/preview" width="640" height="480"></iframe>
