@@ -51,4 +51,21 @@
 
 ## Screenshot
 
-<iframe src="https://drive.google.com/file/d/1P57hmfaOL4H6zK-mKRLqCAn_ryGS6yMO/preview" width="640" height="480"></iframe>
+### homepage
+![image](https://user-images.githubusercontent.com/59625096/93823050-04e7c680-fc16-11ea-9377-e9af266f7380.png)
+
+### Sign up page
+
+![image](https://user-images.githubusercontent.com/59625096/93823113-1f21a480-fc16-11ea-84c6-18b17f042e94.png)
+
+### Subtotal/Cart page
+
+![image](https://user-images.githubusercontent.com/59625096/93823176-3cef0980-fc16-11ea-8273-68e4236c4e15.png)
+
+### Payment page
+
+![image](https://user-images.githubusercontent.com/59625096/93823237-585a1480-fc16-11ea-8e73-9f0b495aec8f.png)
+
+### Drawer component
+![image](https://user-images.githubusercontent.com/59625096/93823369-8f302a80-fc16-11ea-9805-0fefe71145c8.png)
+
