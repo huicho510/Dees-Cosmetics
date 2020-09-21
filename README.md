@@ -51,8 +51,12 @@
 
 ## Screenshot
 
-### homepage
+### Homepage
 ![image](https://user-images.githubusercontent.com/59625096/93823050-04e7c680-fc16-11ea-9377-e9af266f7380.png)
+
+### View of products
+
+![image](https://user-images.githubusercontent.com/59625096/93823666-141b4400-fc17-11ea-8eab-d202a449433f.png)
 
 ### Sign up page
 
